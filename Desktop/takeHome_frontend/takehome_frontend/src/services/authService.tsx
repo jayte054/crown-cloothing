@@ -23,7 +23,7 @@ import { getAnalytics } from "firebase/analytics";
 
 
 export type Role = "user" | "admin"
-export const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3003";
+export const BASE_URL = process.env.REACT_APP_BASE_URL || "https://justin-m3dr.onrender.com";
 
 export interface SignupData {
     email: string;
@@ -39,7 +39,7 @@ export interface SignInData {
 export const signupService = async (email:string, password: string, role: Role): Promise<string> => {
     console.log(email, password, role)
     try{
-        const response = await axios.post(`http://localhost:3003/auth/signup`, {email, password, role})
+        const response = await axios.post(`https://justin-m3dr.onrender.com/auth/signup`, {email, password, role})
         console.log(response.data)
         return response.data.user.uid
     }catch(error){

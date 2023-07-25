@@ -28,7 +28,7 @@ export const SignupPage: React.FC = () => {
 
   return (
     <div>
-      <h1>Take Home</h1>
+      <h1>Authentication</h1>
       <h2>Signup</h2>
       <form onSubmit={handleSubmit}>
         <p>Email:</p>

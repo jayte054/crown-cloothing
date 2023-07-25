@@ -183,6 +183,7 @@ export const AdminPage = () => {
               <td> {index + 1}</td>
               <td> {user.email}</td>
               <input type="file" onChange={(e) => handleImageUpload(e, user.id)} />
+              {/* Display user's current image */}
               {user.image && <img src={user.image} alt="User Image" />}
             </tr>
         ))}

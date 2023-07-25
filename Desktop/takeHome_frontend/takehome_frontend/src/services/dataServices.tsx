@@ -29,3 +29,21 @@ export const getAllData = async () => {
         throw new Error("Error fetciing data")
     }
   }
+
+  export const handleImageUpload = async (email: string, imageFile: File) => {
+    try {
+      const formData = new FormData();
+      formData.append("email", email);
+      formData.append("image", imageFile);
+  
+      const response = await axios.post(`${BASE_URL}/uploadimage`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+  
+      console.log(response.data);
+    } catch (error) {
+      console.error("Error uploading image:", error);
+    }
+  };
