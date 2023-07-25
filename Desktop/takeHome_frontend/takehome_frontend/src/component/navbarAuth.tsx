@@ -11,9 +11,10 @@ export const NavbarAuth = () => {
                         margin: "1rem",
                         borderRadius: "1rem",
                         display: "flex",
-                        justifyContent: "space-between"}}>
+                        justifyContent: "space-between"
+                        }}>
             <h1>Take Home</h1>
-            <span style={{display: "flex-"}}>
+            <span style={{marginTop: "1rem"}}>
             <Link to = "/adminsignin">Admin Signin</Link>
             </span>
             <SignoutButton />
