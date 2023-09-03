@@ -1,7 +1,10 @@
 import { useContext } from "react"
+// import { Elements } from "@stripe/react-stripe-js";
 import CheckoutItem from "../../components/checkout-item/checkout-item.component"
 import { CartContext } from "../../context/cart-context"
+import PaymentForm from "../../components/payment-form/payment-form.component";
 import "./checkoutpage.styles.scss"
+// import { stripePromise } from "../../utils/stripe/stripe.utils";
 
 
 const CheckoutPage = () => {
@@ -32,7 +35,9 @@ const CheckoutPage = () => {
                 )}
             <span className="total">Total:  ₦{cartTotal}</span>
             </div>
-            
+            {/* <Elements stripe={stripePromise}> */}
+            <PaymentForm />
+            {/* </Elements> */}
         </div>
     )
 }
