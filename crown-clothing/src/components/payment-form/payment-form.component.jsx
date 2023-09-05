@@ -15,20 +15,20 @@ const PaymentForm = () => {
         }
         console.log("return")
 
-        try{
-            console.log("response")
-            const response = await fetch("/.netlify/functions/create-payment-intent", {
-                statuscode: 200,
-                method: "post",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({amount: 1000})
-            }).then(res => res.json());
-            console.log(response)
-        }catch(error){
-            console.log("this is the error",{error})
-        }
+        // try{
+        //     console.log("response")
+        //     const response = await fetch("/.netlify/functions/create-payment-intent", {
+        //         statuscode: 200,
+        //         method: "post",
+        //         headers: {
+        //             "Content-Type": "application/json",
+        //         },
+        //         body: JSON.stringify({amount: 1000})
+        //     }).then(res => res.json());
+        //     console.log(response)
+        // }catch(error){
+        //     console.log("this is the error",{error})
+        // }
         
     }
 
