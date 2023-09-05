@@ -1,7 +1,6 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js"
 import  {Button, BUTTON_TYPES_CLASSES}  from "../button/button.component"
 import "./payment-form.style.scss"
-// import "../../../"
 
 const PaymentForm = () => {
     const stripe = useStripe();
@@ -18,7 +17,7 @@ const PaymentForm = () => {
 
         try{
             console.log("response")
-            const response = await fetch('../../../.netlify/functions/create-payment-intent.js', {
+            const response = await fetch("/.netlify/functions/create-payment-intent", {
                 statuscode: 200,
                 method: "post",
                 headers: {
